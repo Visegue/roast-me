@@ -8,7 +8,7 @@ importers:
 
   .:
     devDependencies:
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:tooling/prettier
       '@turbo/gen':
@@ -30,16 +30,16 @@ importers:
         specifier: 0.32.0
         version: 0.32.0
     devDependencies:
-      '@acme/eslint-config':
+      '@roastme/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@acme/tailwind-config':
+      '@roastme/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       '@types/node':
@@ -91,8 +91,8 @@ importers:
         specifier: ~16.0.1
         version: 16.0.1(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
       expo-dev-client:
-        specifier: ~4.0.13
-        version: 4.0.13(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
+        specifier: ~4.0.19
+        version: 4.0.19(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
       expo-linking:
         specifier: ~6.3.1
         version: 6.3.1(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
@@ -142,21 +142,6 @@ importers:
         specifier: 2.2.1
         version: 2.2.1
     devDependencies:
-      '@acme/api':
-        specifier: workspace:*
-        version: link:../../packages/api
-      '@acme/eslint-config':
-        specifier: workspace:*
-        version: link:../../tooling/eslint
-      '@acme/prettier-config':
-        specifier: workspace:*
-        version: link:../../tooling/prettier
-      '@acme/tailwind-config':
-        specifier: workspace:*
-        version: link:../../tooling/tailwind
-      '@acme/tsconfig':
-        specifier: workspace:*
-        version: link:../../tooling/typescript
       '@babel/core':
         specifier: ^7.24.7
         version: 7.24.7
@@ -166,6 +151,21 @@ importers:
       '@babel/runtime':
         specifier: ^7.24.7
         version: 7.24.7
+      '@roastme/api':
+        specifier: workspace:*
+        version: link:../../packages/api
+      '@roastme/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@roastme/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@roastme/tailwind-config':
+        specifier: workspace:*
+        version: link:../../tooling/tailwind
+      '@roastme/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
       '@types/babel__core':
         specifier: ^7.20.5
         version: 7.20.5
@@ -187,19 +187,19 @@ importers:
 
   apps/nextjs:
     dependencies:
-      '@acme/api':
+      '@roastme/api':
         specifier: workspace:*
         version: link:../../packages/api
-      '@acme/auth':
+      '@roastme/auth':
         specifier: workspace:*
         version: link:../../packages/auth
-      '@acme/db':
+      '@roastme/db':
         specifier: workspace:*
         version: link:../../packages/db
-      '@acme/ui':
+      '@roastme/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@acme/validators':
+      '@roastme/validators':
         specifier: workspace:*
         version: link:../../packages/validators
       '@t3-oss/env-nextjs':
@@ -236,16 +236,16 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@acme/eslint-config':
+      '@roastme/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@acme/tailwind-config':
+      '@roastme/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       '@types/node':
@@ -278,13 +278,13 @@ importers:
 
   packages/api:
     dependencies:
-      '@acme/auth':
+      '@roastme/auth':
         specifier: workspace:*
         version: link:../auth
-      '@acme/db':
+      '@roastme/db':
         specifier: workspace:*
         version: link:../db
-      '@acme/validators':
+      '@roastme/validators':
         specifier: workspace:*
         version: link:../validators
       '@trpc/server':
@@ -297,13 +297,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@acme/eslint-config':
+      '@roastme/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -318,15 +318,15 @@ importers:
 
   packages/auth:
     dependencies:
-      '@acme/db':
-        specifier: workspace:*
-        version: link:../db
       '@auth/core':
         specifier: 0.32.0
         version: 0.32.0
       '@auth/drizzle-adapter':
         specifier: ^1.2.0
         version: 1.2.0
+      '@roastme/db':
+        specifier: workspace:*
+        version: link:../db
       '@t3-oss/env-nextjs':
         specifier: ^0.10.1
         version: 0.10.1(typescript@5.4.5)(zod@3.23.8)
@@ -346,13 +346,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@acme/eslint-config':
+      '@roastme/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -383,13 +383,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@acme/eslint-config':
+      '@roastme/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       dotenv-cli:
@@ -444,16 +444,16 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.3(ts-node@10.9.2(@types/node@20.12.9)(typescript@5.4.5)))
     devDependencies:
-      '@acme/eslint-config':
+      '@roastme/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@acme/tailwind-config':
+      '@roastme/tailwind-config':
         specifier: workspace:*
         version: link:../../tooling/tailwind
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       '@types/react':
@@ -484,13 +484,13 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@acme/eslint-config':
+      '@roastme/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../../tooling/prettier
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/typescript
       eslint:
@@ -527,10 +527,10 @@ importers:
         specifier: rc-v8
         version: 8.0.0-alpha.34(eslint@9.4.0)(typescript@5.4.5)
     devDependencies:
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../prettier
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       eslint:
@@ -557,7 +557,7 @@ importers:
         specifier: ^0.5.14
         version: 0.5.14(@ianvs/prettier-plugin-sort-imports@4.2.1(prettier@3.3.1))(prettier@3.3.1)
     devDependencies:
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       typescript:
@@ -576,13 +576,13 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.3(ts-node@10.9.2(@types/node@20.12.9)(typescript@5.4.5)))
     devDependencies:
-      '@acme/eslint-config':
+      '@roastme/eslint-config':
         specifier: workspace:*
         version: link:../eslint
-      '@acme/prettier-config':
+      '@roastme/prettier-config':
         specifier: workspace:*
         version: link:../prettier
-      '@acme/tsconfig':
+      '@roastme/tsconfig':
         specifier: workspace:*
         version: link:../typescript
       eslint:
@@ -4397,13 +4397,13 @@ packages:
     peerDependencies:
       expo: '*'
 
-  expo-dev-client@4.0.13:
-    resolution: {integrity: sha512-OKv78etzW3Yx4ecNEWbedry5z/heG7yfybL+HKkckowZaB13Bdm2h+RcDOxt2sNE8Lu4UQHa9VU5Cfa9s0+NnA==}
+  expo-dev-client@4.0.19:
+    resolution: {integrity: sha512-u3CwIWpLqwVex4vvK9+2qtf17CYxaLXA7PJgtRB2dTsqIXJwyoazZZEMK6wjoL58Tp6GC7v9O9Z6lpayZ4BDKA==}
     peerDependencies:
       expo: '*'
 
-  expo-dev-launcher@4.0.14:
-    resolution: {integrity: sha512-I8KXFjf7vvCwEvargeWUNBP1UHmeUNDxcnG0VXs+3Zmxc3qsTcbE+k8TU6IGeEuEp39gt3/jqEE5xmDmVnW//g==}
+  expo-dev-launcher@4.0.21:
+    resolution: {integrity: sha512-o2KHD0d0yNbF4NKdtGmxc6l4l/xfpTHaFSSvKXTC2ardh7moeLX02ich5qSsqSqCCQkZ2BBelYAfZUOH9cGuqA==}
     peerDependencies:
       expo: '*'
 
@@ -4412,8 +4412,8 @@ packages:
     peerDependencies:
       expo: '*'
 
-  expo-dev-menu@5.0.14:
-    resolution: {integrity: sha512-zPXBMCyjptn4Aw7D2Z8FEqndED33g1ryChN0nyTA1zHzckDNwnGuLdTWTsNFrqmFqyqjRJgG5xFVJmnsDO8WyQ==}
+  expo-dev-menu@5.0.15:
+    resolution: {integrity: sha512-a5aADQXOH/uw2NDy4fbgVl9wkAcZIfkrz8yzwQz0X6Yvf0a68zafqxSvvYkq+MmUTrFsuiST49s+mk4uRqHJMw==}
     peerDependencies:
       expo: '*'
 
@@ -12464,22 +12464,22 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  expo-dev-client@4.0.13(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)):
+  expo-dev-client@4.0.19(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)):
     dependencies:
       expo: 51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)
-      expo-dev-launcher: 4.0.14(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
-      expo-dev-menu: 5.0.14(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
+      expo-dev-launcher: 4.0.21(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
+      expo-dev-menu: 5.0.15(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
       expo-dev-menu-interface: 1.8.3(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
       expo-manifests: 0.14.2(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
       expo-updates-interface: 0.16.2(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
     transitivePeerDependencies:
       - supports-color
 
-  expo-dev-launcher@4.0.14(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)):
+  expo-dev-launcher@4.0.21(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)):
     dependencies:
       ajv: 8.11.0
       expo: 51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)
-      expo-dev-menu: 5.0.14(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
+      expo-dev-menu: 5.0.15(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
       expo-manifests: 0.14.2(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
       resolve-from: 5.0.0
       semver: 7.6.0
@@ -12490,7 +12490,7 @@ snapshots:
     dependencies:
       expo: 51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)
 
-  expo-dev-menu@5.0.14(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)):
+  expo-dev-menu@5.0.15(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)):
     dependencies:
       expo: 51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8)
       expo-dev-menu-interface: 1.8.3(expo@51.0.2(@babel/core@7.24.7)(@babel/preset-env@7.24.7(@babel/core@7.24.7))(bufferutil@4.0.8))
