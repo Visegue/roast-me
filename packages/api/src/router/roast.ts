@@ -7,10 +7,16 @@ import { publicProcedure } from "../trpc";
 
 export const roastRouter = {
   getRoast: publicProcedure
-    .input(z.object({ level: z.enum(["Nice", "Borderline", "Ruthless"]) }))
-    .query(async ({ input }) => {
+    .input(
+      z.object({
+        level: z.enum(["Nice", "Borderline", "Ruthless"]),
+        imageData: z.string().min(100),
+      }),
+    )
+    .mutation(async ({ input }) => {
       try {
-        const roast = await getRoast(input.level);
+        console.log('image data length', input.imageData.length);
+        const roast = await getRoast(input.level, input.imageData);
         return roast;
       } catch (error) {
         console.error("Unable to get roast", error);
