@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
 import { AlertCircle } from "lucide-react";
+import { useState } from "react";
 
 import type { RoastLevel } from "@roastme/api";
 import { Alert, AlertDescription, AlertTitle } from "@roastme/ui/alert";
@@ -12,6 +12,7 @@ import ImagePicker from "~/components/roasts/image-picker";
 import LevelPicker from "~/components/roasts/level-picker";
 import Roast from "~/components/roasts/roast";
 import { api } from "~/trpc/react";
+import { resizedataURL } from "~/utils/resize-image";
 
 export const runtime = "edge";
 
@@ -22,17 +23,16 @@ export default function HomePage() {
 
   const roast = api.roast.getRoast.useMutation();
 
-  const onImagePicked = (image: File) => {
-    setImageFile(image);
+  const onImagePicked = (imageFile: File) => {
+    setImageFile(imageFile);
 
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = async (e) => {
       if (e.target) {
         setImageDataUrl(e.target.result?.toString());
       }
     };
-
-    reader.readAsDataURL(image);
+    reader.readAsDataURL(imageFile);
   };
 
   return (
@@ -56,10 +56,15 @@ export default function HomePage() {
         {roast.isIdle && (
           <Button
             disabled={!roastLevel || !imageDataUrl}
-            onClick={() => {
+            onClick={async () => {
+              const resizedData = await resizedataURL({
+                data: imageDataUrl ?? "",
+                maxSide: 512,
+              });
+
               roast.mutate({
                 level: roastLevel ?? "Nice",
-                imageData: imageDataUrl ?? "",
+                imageData: resizedData ?? "",
               });
             }}
           >
