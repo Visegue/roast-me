@@ -55,7 +55,7 @@ export default function HomePage() {
         />
         {roast.isIdle && (
           <Button
-            disabled={!roastLevel && !imageDataUrl}
+            disabled={!roastLevel || !imageDataUrl}
             onClick={() => {
               roast.mutate({
                 level: roastLevel ?? "Nice",
