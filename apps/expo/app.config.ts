@@ -2,8 +2,8 @@ import type { ConfigContext, ExpoConfig } from "expo/config";
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "expo",
-  slug: "expo",
+  name: "Roast Me",
+  slug: "roast-me",
   scheme: "expo",
   version: "0.1.0",
   orientation: "portrait",
@@ -19,11 +19,11 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   assetBundlePatterns: ["**/*"],
   ios: {
-    bundleIdentifier: "your.bundle.identifier",
+    bundleIdentifier: "se.viseuge.roastme",
     supportsTablet: true,
   },
   android: {
-    package: "your.bundle.identifier",
+    package: "se.visegue.roastme",
     adaptiveIcon: {
       foregroundImage: "./assets/icon.png",
       backgroundColor: "#1F104A",
@@ -31,7 +31,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   extra: {
     eas: {
-      projectId: "f3e06c54-1c80-4fab-b531-0e1548d5173b",
+      projectId: "066d224c-c5de-4242-9a35-b913d91e86f2",
     },
   },
   experiments: {
